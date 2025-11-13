@@ -52,7 +52,7 @@ public class ClientesController {
     public ModelAndView consultarPorCodigo (@PathVariable Long codigo){
         Clientes cliente = clientesRepository.findByCodigo(codigo);
         ModelAndView mv = new ModelAndView("formulario");
-        mv.addObject("cliente", cliente);
+        mv.addObject("clientes", cliente);
         mv.addObject("acao", "/clientes/atualizar/" + codigo);
         return mv;
     }

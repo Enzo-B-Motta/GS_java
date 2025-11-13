@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Lista de Clientes</h1>
+        <a href="/clientes/novo" class="btn btn-primary mb-3">Cadastrar novo Cliente</a>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Código</th><th>Nome</th><th>Idade</th><th>Peso</th><th>Altura</th><th>Inicio do Tratamento</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="Clientes : ${clientes}">
+                <td th:text="${Clientes.codigo}"></td>
+                <td th:text="${Clientes.nome}"></td>
+                <td th:text="${Clientes.idade}"></td>
+                <td th:text="${Clientes.peso} + 'Kg'"></td>
+                <td th:text="${Clientes.altura}"></td>
+                <td th:text="${#temporals.format(Clientes.inicioDoTratamento, 'dd/MM/yyyy')}"></td>
+                <td>
+                    <a th:href="@{/clientes/editar/{id}(id=${Clientes.codigo})}" class="btn btn-warning btn-sm me-1">
+                        <i class="bi bi-pencil-square"></i> Editar
+                    </a>
+                    <a th:href="@{/clientes/excluir/{id}(id=${Clientes.codigo})}" class="btn btn-danger btn-sm"
+                    onclick="return confirm('Tem certeza que deseja excluir este Cliente?');">
+                        <i class="bi bi-trash"></i> Excluir
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
