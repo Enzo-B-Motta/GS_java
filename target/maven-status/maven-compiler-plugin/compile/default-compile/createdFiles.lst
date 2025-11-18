@@ -1,5 +1,5 @@
-br/com/fiap/Clientes/model/entity/Clientes.class
-br/com/fiap/Clientes/controller/ClientesController.class
-br/com/fiap/Clientes/model/DTO/ClientesDTO.class
-br/com/fiap/Clientes/model/repository/ClientesRepository.class
-br/com/fiap/Clientes/ClientesApplication.class
+br\com\fiap\Clientes\model\DTO\ClientesDTO.class
+br\com\fiap\Clientes\ClientesApplication.class
+br\com\fiap\Clientes\model\repository\ClientesRepository.class
+br\com\fiap\Clientes\controller\ClientesController.class
+br\com\fiap\Clientes\model\entity\Clientes.class

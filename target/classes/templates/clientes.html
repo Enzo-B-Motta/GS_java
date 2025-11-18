@@ -14,17 +14,17 @@
         <table class="table table-striped mt-3">
             <thead>
                 <tr>
-                    <th>Código</th><th>Nome</th><th>Idade</th><th>Peso</th><th>Altura</th><th>Inicio do Tratamento</th>
+                    <th>Código</th><th>Nome</th><th>Telefone</th><th>Email</th><th>Estatus</th><th>Data de Nascimento</th>
                 </tr>
             </thead>
             <tbody>
             <tr th:each="Clientes : ${clientes}">
                 <td th:text="${Clientes.codigo}"></td>
                 <td th:text="${Clientes.nome}"></td>
-                <td th:text="${Clientes.idade}"></td>
-                <td th:text="${Clientes.peso} + 'Kg'"></td>
-                <td th:text="${Clientes.altura}"></td>
-                <td th:text="${#temporals.format(Clientes.inicioDoTratamento, 'dd/MM/yyyy')}"></td>
+                <td th:text="${Clientes.telefone}"></td>
+                <td th:text="${Clientes.email}"></td>
+                <td th:text="${Clientes.estatus}"></td>
+                <td th:text="${#temporals.format(Clientes.dataDeNascimento, 'dd/MM/yyyy')}"></td>
                 <td>
                     <a th:href="@{/clientes/editar/{id}(id=${Clientes.codigo})}" class="btn btn-warning btn-sm me-1">
                         <i class="bi bi-pencil-square"></i> Editar
@@ -40,3 +40,4 @@
     </div>
 </body>
 </html>
+

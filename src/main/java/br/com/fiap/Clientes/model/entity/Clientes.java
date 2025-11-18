@@ -15,18 +15,18 @@ public class Clientes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo; 
     private String nome;
-    private int idade;
-    private Double peso;
-    private Double altura;
-    private LocalDate inicioDoTratamento;
+    private String telefone;
+    private String email;
+    private String estatus;
+    private LocalDate dataDeNascimento;
 
     public Clientes(){}
     public Clientes(ClientesDTO clientesDTO){
         this.nome = clientesDTO.nome();
-        this.idade = clientesDTO.idade();
-        this.peso = clientesDTO.peso();
-        this.altura = clientesDTO.altura();
-        this.inicioDoTratamento = clientesDTO.inicioDoTratamento();
+        this.telefone = clientesDTO.telefone();
+        this.email = clientesDTO.email();
+        this.estatus = clientesDTO.estatus();
+        this.dataDeNascimento = clientesDTO.dataDeNascimento();
     }
 
     public void setCodigo(Long codigo){
@@ -43,31 +43,31 @@ public class Clientes {
         return nome;
     }
 
-    public void setIdade(int idade){
-        this.idade = idade;
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
     }
-    public int getIdade(){
-        return idade;
-    }
-
-    public void setPeso(Double peso){
-        this.peso = peso;
-    }
-    public Double getPeso(){
-        return peso;
+    public String getTelefone(){
+        return telefone;
     }
 
-    public void setAltura(Double altura){
-        this.altura = altura;
+    public void setEmail(String email){
+        this.email = email;
     }
-    public Double getAltura(){
-        return altura;
+    public String getEmail(){
+        return email;
     }
 
-    public void setInicioDoTratamento (LocalDate inicioDoTratamento){
-        this.inicioDoTratamento = inicioDoTratamento;
+    public void setEstatus(String estatus){
+        this.estatus = estatus;
     }
-    public LocalDate getInicioDoTratamento(){
-        return inicioDoTratamento;
+    public String getEstatus(){
+        return estatus;
+    }
+
+    public void setDataDeNascimento (LocalDate dataDeNascimento){
+        this.dataDeNascimento = dataDeNascimento;
+    }
+    public LocalDate getDataDeNascimento(){
+        return dataDeNascimento;
     }
 }

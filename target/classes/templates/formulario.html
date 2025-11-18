@@ -15,20 +15,20 @@
             <input type="text" class="form-control" id="nome" name="nome" th:action="${acao} != null ? ${clientes.nome}" required>
         </div>
         <div class="mb-3">
-            <label form="idade" class="form-label">Idade</label>
-            <input type="number" class="form-control" id="idade" name="idade" th:action="${acao} != null ? ${clientes.idade}" required>
+            <label form="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" th:action="${acao} != null ? ${clientes.telefone}" required>
         </div>
         <div class="mb-3">
-            <label form="peso" class="form-label">Peso</label>
-            <input type="text" class="form-control" id="peso" name="peso" th:action="${acao} != null ? ${clientes.peso}" required>
+            <label form="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" th:action="${acao} != null ? ${clientes.estatus}" required>
         </div>
         <div class="mb-3">
-            <label form="altura" class="form-label">Altura</label>
-            <input type="text" class="form-control" id="altura" name="altura" th:action="${acao} != null ? ${clientes.altura}" required>
+            <label form="estatus" class="form-label">Estatus</label>
+            <input type="text" class="form-control" id="estatus" name="estatus" th:action="${acao} != null ? ${clientes.estatus}" required>
         </div>
         <div class="mb-3">
-            <label form="inicioDoTratamento" class="form-label">Inicio do Tratamento</label>
-            <input type="date" class="form-control" id="inicioDoTratamento" name="inicioDoTratamento" th:action="${acao} != null ? ${clientes.inicioDoTratamento}" required>
+            <label form="dataDeNascimento" class="form-label">dataDeNascimento</label>
+            <input type="date" class="form-control" id="dataDeNascimento" name="dataDeNascimento" th:action="${acao} != null ? ${clientes.dataDeNascimento}" required>
         </div>
         <button type="submit" class="btn btn-success">Salvar</button>
         <a href="/cliente" class="btn btn-secondary">Cancelar</a>
